@@ -13,7 +13,6 @@ const PORT = process.env.PORT || 5000; // Default to 5000 if not set
 db();
 
 // ✅ Middleware Setup
-const cors = require("cors");
 
 app.use(cors({
     origin: "*",  // Allow all origins temporarily for debugging
