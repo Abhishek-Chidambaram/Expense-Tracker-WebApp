@@ -11,6 +11,7 @@
     "@svgr/webpack": "^8.1.0",
     "antd": "^5.23.4",
     "axios": "^1.7.9",
+    "bootstrap": "^5.3.3",
     "chart.js": "^4.4.7",
     "cra-template": "1.2.0",
     "framer-motion": "^12.4.1",
