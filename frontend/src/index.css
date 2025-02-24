@@ -1,0 +1,45 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+  --color-green: #42AD00;
+  --color-red: #FF0000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #111111;
+  font-family: 'Inter', sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Dark theme for react-day-picker */
+.dark-calendar {
+    background-color: #222222;
+    color: white;
+    padding: 1rem;
+}
+
+.dark-calendar .rdp-button:hover:not([disabled]) {
+    background-color: rgba(168, 85, 247, 0.2);
+}
+
+.dark-calendar .rdp-day_selected:not([disabled]) {
+    background-color: #9333ea;
+    color: white;
+}
+
+.dark-calendar .rdp-button:focus-visible:not([disabled]) {
+    background-color: rgba(168, 85, 247, 0.2);
+    outline-color: #9333ea;
+}
