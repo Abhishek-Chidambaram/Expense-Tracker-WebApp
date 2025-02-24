@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect, useCallback } from "react";
 import axios from "axios";
 import { useAuth } from '../Authentication/AuthContext';
 
-const BASE_URL = "https://expense-tracker-webapp-anva.onrender.com/api/";
+const BASE_URL = "https://expense-tracker-webapp-anva.onrender.com/api";
 
 const GlobalContext = React.createContext();
 
@@ -33,7 +33,7 @@ export const GlobalProvider = ({ children }) => {
             if (!headers) return;
             
             const response = await axios.get(
-                `${BASE_URL}get-incomes`,
+                `${BASE_URL}/get-incomes`,
                 headers
             );
             setIncomes(response.data);
@@ -48,7 +48,7 @@ export const GlobalProvider = ({ children }) => {
             if (!headers) return;
             
             const response = await axios.get(
-                `${BASE_URL}get-expenses`,
+                `${BASE_URL}/get-expenses`,
                 headers
             );
             setExpenses(response.data);
@@ -63,7 +63,7 @@ export const GlobalProvider = ({ children }) => {
             if (!headers) throw new Error("No authentication token found");
             
             const response = await axios.post(
-                `${BASE_URL}add-income`,
+                `${BASE_URL}/add-income`,
                 income,
                 headers
             );
@@ -83,7 +83,7 @@ export const GlobalProvider = ({ children }) => {
             if (!headers) return;
             
             await axios.delete(
-                `${BASE_URL}delete-income/${id}`,
+                `${BASE_URL}/delete-income/${id}`,
                 headers
             );
             await getIncomes();
@@ -98,7 +98,7 @@ export const GlobalProvider = ({ children }) => {
             if (!headers) return;
             
             await axios.post(
-                `${BASE_URL}add-expense`,
+                `${BASE_URL}/add-expense`,
                 expense,
                 headers
             );
@@ -114,7 +114,7 @@ export const GlobalProvider = ({ children }) => {
             if (!headers) return;
             
             await axios.delete(
-                `${BASE_URL}delete-expense/${id}`,
+                `${BASE_URL}/delete-expense/${id}`,
                 headers
             );
             await getExpenses();
