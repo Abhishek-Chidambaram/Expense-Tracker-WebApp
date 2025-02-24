@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect, useCallback } from "react";
 import axios from "axios";
 import { useAuth } from '../Authentication/AuthContext';
 
-const BASE_URL = "https://expense-tracker-webapp-anva.onrender.com";
+const BASE_URL = "https://expense-tracker-webapp-anva.onrender.com/api";
 
 const GlobalContext = React.createContext();
 

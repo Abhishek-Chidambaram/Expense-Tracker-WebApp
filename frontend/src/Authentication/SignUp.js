@@ -4,7 +4,7 @@ import { useAuth } from "./AuthContext";
 import { motion } from "framer-motion";
 import { FaLock, FaEnvelope, FaUser, FaEye, FaEyeSlash } from "react-icons/fa";
 
-const API_URL = "http://localhost:5000/api/auth";
+const API_URL = "https://expense-tracker-webapp-anva.onrender.com/api/auth";
 
 const SignUp = () => {
     const [formData, setFormData] = useState({ name: "", email: "", password: "", confirmPassword: "" });
