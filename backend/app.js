@@ -13,6 +13,9 @@ const PORT = process.env.PORT || 5000; // Default to 5000 if not set
 db();
 
 // ✅ Middleware Setup
+// ✅ Middleware Setup
+app.use(express.json());  // ✅ Allows parsing JSON requests
+app.use(express.urlencoded({ extended: true })); // ✅ Allows parsing form data
 
 app.use(cors({
     origin: "*",  // Allow all origins temporarily for debugging
