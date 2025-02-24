@@ -13,11 +13,15 @@ const PORT = process.env.PORT || 5000; // Default to 5000 if not set
 db();
 
 // ✅ Middleware Setup
-app.use(express.json());
+const cors = require("cors");
+
 app.use(cors({
-    origin: ['http://localhost:3000', 'http://localhost:3001', 'http://localhost:3002', 'http://localhost:3003','https://expense-tracker-web-app-delta.vercel.app/'],
-    credentials: true // Allow cookies
+    origin: "*",  // Allow all origins temporarily for debugging
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true // Allows cookies and authorization headers
 }));
+
 
 // ✅ Home Route
 app.get('/', (req, res) => {
